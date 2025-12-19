@@ -46,7 +46,7 @@ st.title("ISRO Satellites : 3D Live Radar")
 # -------------------------------------------------
 @st.cache_data
 def load_csv_data():
-    path = r"D:\Data Analysis Projects\Sentinel 2\satcat.csv"
+    path = r"satcat.csv"
     df = pd.read_csv(path)
     df.columns = [c.strip().upper() for c in df.columns]
     df["NORAD_CAT_ID"] = pd.to_numeric(df["NORAD_CAT_ID"], errors="coerce")
@@ -158,3 +158,4 @@ st.markdown(
     """, 
     unsafe_allow_html=True
             )
+
